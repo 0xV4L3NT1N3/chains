@@ -1678,10 +1678,9 @@ impl NamedChain {
             TelosEvmTestnet => {
                 ("https://api.testnet.teloscan.io/api", "https://testnet.teloscan.io")
             }
-            Hyperliquid => (
-                "https://api.etherscan.io/v2/api?chainid=999",
-                "https://hyperevmscan.io",
-            ),
+            Hyperliquid => {
+                ("https://api.etherscan.io/v2/api?chainid=999", "https://hyperevmscan.io")
+            }
             Abstract => ("https://api.etherscan.io/v2/api?chainid=2741", "https://abscan.org"),
             AbstractTestnet => {
                 ("https://api.etherscan.io/v2/api?chainid=11124", "https://sepolia.abscan.org")
@@ -1801,9 +1800,7 @@ impl NamedChain {
             | KaruraTestnet | Mode | ModeSepolia | Pgn | PgnSepolia | Shimmer | Zora
             | ZoraSepolia | Darwinia | Crab | Koi | Immutable | ImmutableTestnet | Soneium
             | SoneiumMinatoTestnet | World | WorldSepolia | Curtis | Ink | InkSepolia
-            | SuperpositionTestnet | Superposition | Vana | Story => {
-                "BLOCKSCOUT_API_KEY"
-            }
+            | SuperpositionTestnet | Superposition | Vana | Story => "BLOCKSCOUT_API_KEY",
 
             Boba => "BOBASCAN_API_KEY",
 
